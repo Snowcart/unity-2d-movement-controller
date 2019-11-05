@@ -29,13 +29,13 @@ public class PlayerMovement : MonoBehaviour
 		_controls = new PlayerControls();
 		_rb = GetComponent<Rigidbody2D>();
 		if (OnLandEvent == null) OnLandEvent = new UnityEvent();
-		isGamepadAwake();
+		IsGamepadAwake();
 		HandleMovementInput();
 	}
 
 	void Update()
 	{
-		getIsGamepad();
+		GetIsGamepad();
 		if (!isGamepad)
 		{
 			HandleKeyboardMovement();
@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
 		_controls.Gameplay.Jump.canceled += c => jumpPressed = false;
 	}
 
-	void getIsGamepad()
+	void GetIsGamepad()
 	{
 		InputSystem.onDeviceChange += (device, change) =>
 		{
@@ -175,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
 		};
 	}
 
-	void isGamepadAwake()
+	void IsGamepadAwake()
 	{
 		var devices = InputSystem.devices;
 		for (var i = 0; i < devices.Count; ++i)
