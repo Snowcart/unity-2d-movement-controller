@@ -32,7 +32,7 @@ The `Jump` mapping should handle keyboard and gamepad input, whereas the `Horizo
 ### Variables
 You will need to create a `RigidBody2D` component on the same object. 
 
-Additionally, you will need to select which masks are consider "ground" by selecting them on the `ground` serialized variable on the script component in Unity. Additionally, you will need to create an empty object on your player object called Soundcheck at the "feet" of your player object. This will need to be passed into the script component under the serialized field `soundcheck` in Unity.
+Additionally, you will need to select which masks are consider "ground" by selecting them on the `ground` serialized variable on the script component in Unity. Additionally, you will need to create an empty object on your player object called Soundcheck at the "feet" of your player object. This will need to be passed into the script component under the serialized field `groundCheck` in Unity.
 
 ## Dependencies
 
