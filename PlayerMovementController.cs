@@ -147,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
 	void HandleHorizontalInput()
 	{
 		_controls.Gameplay.Horizontal.performed += c => horizontalMove = c.ReadValue<float>() * runSpeed;
+		_controls.Gameplay.Horizontal.canceled += c => horizontalMove = 0;
 	}
 
 	void HandleJumpInput()
